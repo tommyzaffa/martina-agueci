@@ -299,6 +299,7 @@
           <div class="card__sum"><span>${w.summary}</span></div>
         </div>
         ${w.preview ? '<span class="card__play" aria-hidden="true">▶</span>' : ""}
+        ${w.badge ? `<span class="card__badge" aria-hidden="true">${w.badge}</span>` : ""}
       </a>`;
   }
   grid.innerHTML = WORKS.map(cardHTML).join("");
@@ -396,6 +397,12 @@
     const w = WORKS[i];
     const next = WORKS[(i + 1) % WORKS.length];
     const meta = [["Anno", w.year], ["Cliente", w.client], ["Ruolo", w.role], ["Strumenti", w.tools]].filter(([, v]) => v && v !== "—");
+    if (w.link) meta.push(["Sito", `<a href="${w.link.url}" target="_blank" rel="noopener">${w.link.label}</a>`]);
+    const fest = w.festivals
+      ? `<section class="sp__fest"><h3>Selezioni ufficiali</h3><ul>${w.festivals
+          .map(([n, d]) => `<li><span class="laurel" aria-hidden="true">❦</span><b>${n}</b><small>${d}</small><span class="laurel laurel--r" aria-hidden="true">❦</span></li>`)
+          .join("")}</ul></section>`
+      : "";
     page.innerHTML = `
       <header class="sp__head">
         <h2 class="sp__title" id="sheet-title">${fmt(w.title)}</h2>
@@ -405,6 +412,7 @@
         <div class="sp__body">${w.body.map((p) => `<p>${p}</p>`).join("")}</div>
         <dl class="sp__meta">${meta.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
       </div>
+      ${fest}
       ${mediaHTML(w)}
       ${w.credits ? `<section class="sp__credits"><h3>Crediti</h3><dl>${w.credits.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl></section>` : ""}
       <a class="sp__next" href="#/lavori/${next.id}" data-cursor="Avanti"><small>Prossimo lavoro →</small><strong>${fmt(next.title)}</strong></a>`;
@@ -536,6 +544,29 @@
   const socials = $("[data-socials]");
   const links = [{ label: "Apri la mail ↗", url: "mailto:" + SITE.email }, ...(SITE.socials || []).filter((s) => s.url)];
   socials.innerHTML = links.map((s) => `<a href="${s.url}" ${s.url.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>${s.label}</a>`).join("");
+
+  /* ---------- Il coccodrillo fotografo (flash!) ---------- */
+  const croc = $("[data-croc]");
+  const flash = $("[data-flash]");
+  if (croc) {
+    let busy = false;
+    const shoot = () => {
+      if (busy) return;
+      busy = true;
+      croc.classList.remove("snap"); void croc.offsetWidth; croc.classList.add("snap");
+      setTimeout(() => {
+        if (!calm) { flash.classList.remove("go"); void flash.offsetWidth; flash.classList.add("go"); }
+        croc.classList.add("said");
+      }, 260);
+      setTimeout(() => { croc.classList.remove("said"); busy = false; }, 1800);
+    };
+    croc.addEventListener("click", shoot);
+    new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) setTimeout(shoot, 700); }), { threshold: 0.6 }).observe(croc);
+  }
+
+  /* ---------- Il tesserino MIB ---------- */
+  const badge = $(".mib");
+  if (badge) badge.addEventListener("click", () => { badge.classList.remove("swing"); void badge.offsetWidth; badge.classList.add("swing"); });
 
   /* ---------- Torna su ---------- */
   $("[data-totop]").addEventListener("click", () => scrollTo({ top: 0, behavior: calm ? "auto" : "smooth" }));
