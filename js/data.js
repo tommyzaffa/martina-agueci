@@ -21,7 +21,7 @@
 window.SITE = {
   name: "Martina Agueci",
   email: "agutina2874@gmail.com",
-  phone: "+41 79 463 95 28",
+  phone: "", // vuoto = il pulsante del telefono non compare
   place: "Losone, Ticino (CH)",
   // aggiungi i link quando ci sono, es. "https://instagram.com/..."
   socials: [
