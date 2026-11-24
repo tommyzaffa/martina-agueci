@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Martina Agueci — video editor, motion & graphic designer</title>
+  <meta name="description" content="Portfolio di Martina Agueci: montaggio e post-produzione, motion design, grafica, fotografia e disegno. Losone, Ticino." />
+  <meta name="theme-color" content="#f2ece2" />
+  <meta property="og:title" content="Martina Agueci — portfolio" />
+  <meta property="og:description" content="Monto video, animo cose e disegno maghi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tommyzaffa.github.io/martina-agueci/" />
+  <meta property="og:image" content="https://tommyzaffa.github.io/martina-agueci/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/avatar/back.webp" />
+  <link rel="preload" as="image" href="assets/avatar/front.webp" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      var calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var seen = false;
+      try { seen = sessionStorage.getItem("leader") === "1"; } catch (e) {}
+      if (!calm && !seen && !location.hash) d.classList.add("intro");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#lavori">Salta ai lavori</a>
+
+  <!-- ===== Countdown d'apertura (pellicola) ===== -->
+  <div class="leader" aria-hidden="true">
+    <div class="leader__frame">
+      <div class="leader__sweep"></div>
+      <div class="leader__cross"></div>
+      <div class="leader__ring"></div>
+      <div class="leader__num">3</div>
+    </div>
+    <p class="leader__label">MARTINA AGUECI — PORTFOLIO — BOBINA 01</p>
+  </div>
+
+  <!-- ===== Cursore ===== -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+  <!-- ===== Navigazione ===== -->
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#top" aria-label="Torna su">
+      <span class="sprite d-face nav__face"></span>
+      <span class="nav__name">Martina&nbsp;Agueci</span>
+    </a>
+    <nav class="nav__links" aria-label="Sezioni">
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#lavori">Lavori</a>
+      <a href="#percorso">Percorso</a>
+      <a href="#contatti" class="nav__cta">Contatti</a>
+    </nav>
+    <button class="nav__burger" aria-label="Apri il menu" aria-expanded="false" data-burger><span></span><span></span></button>
+  </header>
+  <div class="menu" data-menu hidden>
+    <nav aria-label="Menu">
+      <a href="#chi-sono"><small>01</small>Chi sono</a>
+      <a href="#lavori"><small>02</small>Lavori</a>
+      <a href="#percorso"><small>03</small>Percorso</a>
+      <a href="#formazione"><small>04</small>Formazione</a>
+      <a href="#contatti"><small>05</small>Contatti</a>
+    </nav>
+    <span class="sprite d-witchcat menu__cat" aria-hidden="true"></span>
+  </div>
+
+  <main>
+    <!-- ================= COPERTINA ================= -->
+    <section class="hero" id="top">
+      <div class="hero__panel">
+        <div class="hero__strip" aria-hidden="true">
+          <span>Vol.&nbsp;01</span><span>Portfolio</span><span class="hide-s">Montaggio · Motion · Grafica</span><span>2026</span><span class="hero__price">CHF&nbsp;0.–</span>
+        </div>
+
+        <div class="hero__copy">
+          <p class="hero__kicker caption">Episodio 1: <b>la ragazza che monta i video</b></p>
+          <h1 class="hero__title" aria-label="Martina Agueci">
+            <span class="hero__line" data-split>Martina</span>
+            <span class="hero__line hero__line--2" data-split>Agueci</span>
+          </h1>
+          <p class="hero__roles">
+            <span class="tag tag--ink">Video editor</span>
+            <span class="tag">Motion design</span>
+            <span class="tag">Graphic design</span>
+          </p>
+          <p class="hero__lead hand">monto video, animo cose<br />e disegno maghi.</p>
+          <div class="hero__cta">
+            <a class="btn btn--red" href="#lavori" data-cursor="Vai!">Guarda i lavori <span aria-hidden="true">▶</span></a>
+            <a class="btn" href="#contatti" data-cursor="Ciao!">Scrivimi <span aria-hidden="true">✉</span></a>
+          </div>
+        </div>
+
+        <div class="hero__stage">
+          <div class="burst" aria-hidden="true"></div>
+          <div class="halftone hero__dots" aria-hidden="true"></div>
+          <div class="puppet puppet--hero" data-puppet="hero" role="img" aria-label="Tina, l’avatar disegnato da Martina, che saluta"></div>
+          <div class="bubble bubble--hero" data-bubble aria-live="polite"><span data-bubble-text>…</span></div>
+          <p class="hero__note hand" aria-hidden="true">↖ questa sono io<br />(disegnata da me)</p>
+        </div>
+
+        <div class="hero__rec" aria-hidden="true"><i></i>REC <span data-timecode>00:00:00:00</span></div>
+        <span class="sprite d-starwizard hero__wizard" data-speed="-0.12" aria-hidden="true"></span>
+        <span class="sprite d-eye hero__eye" aria-hidden="true"></span>
+        <span class="spark s1" aria-hidden="true">✦</span><span class="spark s2" aria-hidden="true">✧</span><span class="spark s3" aria-hidden="true">✦</span>
+        <a class="hero__scroll" href="#chi-sono"><span>scrolla</span><b aria-hidden="true">↓</b></a>
+      </div>
+    </section>
+
+    <!-- ================= NASTRI ================= -->
+    <div class="tickers" aria-hidden="true">
+      <div class="ticker ticker--ink"><div class="ticker__track"><span>Montaggio ✦ Post-produzione ✦ Motion design ✦ Grafica ✦ Camera live ✦ Fotografia ✦ Disegno ✦ Animazione ✦&nbsp;</span><span>Montaggio ✦ Post-produzione ✦ Motion design ✦ Grafica ✦ Camera live ✦ Fotografia ✦ Disegno ✦ Animazione ✦&nbsp;</span></div></div>
+      <div class="ticker ticker--red"><div class="ticker__track"><span>Premiere Pro ★ After Effects ★ Photoshop ★ Illustrator ★ InDesign ★ DaVinci ★ Krita ★ biro blu ★&nbsp;</span><span>Premiere Pro ★ After Effects ★ Photoshop ★ Illustrator ★ InDesign ★ DaVinci ★ Krita ★ biro blu ★&nbsp;</span></div></div>
+      <span class="sprite d-frog tickers__frog" data-hop aria-hidden="true"></span>
+    </div>
+
+    <!-- ================= CHI SONO ================= -->
+    <section class="section about" id="chi-sono">
+      <header class="chapter">
+        <p class="chapter__num">Capitolo 01</p>
+        <h2 class="chapter__title" data-split>Chi sono</h2>
+      </header>
+
+      <div class="about__grid">
+        <figure class="panel about__photo reveal">
+          <img src="assets/me/camera.webp" alt="Martina con la macchina fotografica in mano" loading="lazy" width="1400" height="935" />
+          <figcaption class="caption caption--corner">Questa sono io. Quella vera.</figcaption>
+          <span class="sticker sticker--burst" aria-hidden="true">ciao!</span>
+        </figure>
+
+        <div class="panel panel--plain about__intro reveal">
+          <div class="bubble bubble--big">
+            <p>Sono una <mark>video editor</mark> e <mark>visual designer</mark>. Mi sono specializzata in montaggio e post-produzione al CISA, dopo la formazione in Interactive Media Design al CSIA.</p>
+            <p>Unisco audiovisivo, grafica e comunicazione visiva, con un debole per il <b>documentario</b> e per le opere <b>sperimentali</b>. Ho fatto parte del comitato di selezione del MERGE Film Festival di Massagno, il primo festival in Svizzera dedicato al cinema e all’intelligenza artificiale.</p>
+            <p class="hand about__ps">p.s. nel tempo libero disegno. Tantissimo.</p>
+          </div>
+        </div>
+
+        <div class="panel about__sheet reveal">
+          <p class="about__sheet-title">Scheda personaggio</p>
+          <dl class="stats">
+            <div><dt>Nome</dt><dd>Martina «Tina» Agueci</dd></div>
+            <div><dt>Classe</dt><dd>Video editor · Motion &amp; graphic designer</dd></div>
+            <div><dt>Base</dt><dd>Losone, Ticino 🇨🇭</dd></div>
+            <div><dt>Lingue</dt><dd>Italiano (madrelingua) · Inglese (B1)</dd></div>
+          </dl>
+          <p class="about__sheet-sub">Poteri speciali</p>
+          <ul class="powers">
+            <li>Montaggio e post-produzione</li>
+            <li>Motion graphics</li>
+            <li>Grafica e web design</li>
+            <li>Camera live e fotografia</li>
+            <li>Presa diretta</li>
+            <li>Animazione, 3D (base), disegno a mano e digitale</li>
+          </ul>
+          <p class="about__sheet-sub">Inventario</p>
+          <ul class="inventory" aria-label="Software">
+            <li title="Premiere Pro">Pr</li><li title="After Effects">Ae</li><li title="DaVinci Resolve">Dv</li><li title="Photoshop">Ps</li><li title="Illustrator">Ai</li><li title="InDesign">Id</li><li title="Adobe XD">Xd</li><li title="Krita">Kr</li><li title="Biro blu" class="inventory__pen">✎</li>
+          </ul>
+        </div>
+
+        <div class="about__puppet reveal">
+          <div class="puppet puppet--about" data-puppet="about" role="img" aria-label="Tina indica la scheda personaggio"></div>
+          <p class="hand about__arrow">← sì, ho disegnato<br />anche questa</p>
+        </div>
+
+        <span class="sprite d-beardwizard about__wizard" data-speed="0.08" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- ================= LAVORI ================= -->
+    <section class="section works" id="lavori">
+      <header class="chapter chapter--works">
+        <p class="chapter__num">Capitolo 02</p>
+        <h2 class="chapter__title" data-split>Lavori</h2>
+        <div class="cat-peek" aria-hidden="true">
+          <span class="sprite d-cat" data-cat></span>
+          <i class="pupil pupil--l"></i><i class="pupil pupil--r"></i>
+        </div>
+      </header>
+
+      <div class="filters" role="toolbar" aria-label="Filtra i lavori" data-filters>
+        <button class="filter is-on" data-filter="all" aria-pressed="true">Tutto <sup></sup></button>
+        <button class="filter" data-filter="video" aria-pressed="false">Video <sup></sup></button>
+        <button class="filter" data-filter="motion" aria-pressed="false">Motion <sup></sup></button>
+        <button class="filter" data-filter="grafica" aria-pressed="false">Grafica <sup></sup></button>
+        <button class="filter" data-filter="foto" aria-pressed="false">Foto <sup></sup></button>
+        <button class="filter" data-filter="disegno" aria-pressed="false">Disegno <sup></sup></button>
+      </div>
+
+      <div class="grid" data-grid></div>
+      <span class="sprite d-monster works__monster" aria-hidden="true"></span>
+    </section>
+
+    <!-- ================= PERCORSO ================= -->
+    <section class="section path" id="percorso" data-path>
+      <div class="path__sticky">
+        <header class="chapter chapter--light">
+          <p class="chapter__num">Capitolo 03</p>
+          <h2 class="chapter__title" data-split>Percorso</h2>
+          <p class="path__hint hand">(la mia pellicola fin qui →)</p>
+        </header>
+        <div class="film" data-film>
+          <div class="film__track" data-film-track>
+            <article class="frame">
+              <p class="frame__year">2026</p>
+              <h3>Selezionatrice, graphic designer e video editor</h3>
+              <p class="frame__where">MERGE Film Festival, Massagno</p>
+              <p>Membro del comitato di selezione dei film. Grafiche animate e montaggi per il web.</p>
+            </article>
+            <article class="frame">
+              <p class="frame__year">2026</p>
+              <h3>Video editor</h3>
+              <p class="frame__where">Lugano Dance Project</p>
+              <p>Montaggi video per social, YouTube e Instagram.</p>
+            </article>
+            <article class="frame">
+              <p class="frame__year">2026</p>
+              <h3>Fonica e data wrangler</h3>
+              <p class="frame__where">Spring Academy</p>
+              <p>Presa diretta per un corto di Lin Yihan; data wrangling per un corto di Anastassya Angelova.</p>
+            </article>
+            <figure class="frame frame--photo">
+              <img src="assets/me/bts-camera-1.webp" alt="Martina dietro una telecamera durante un evento" loading="lazy" />
+              <figcaption class="hand">dietro la camera</figcaption>
+            </figure>
+            <article class="frame frame--red">
+              <p class="frame__year">2023 – 2026</p>
+              <h3>Live camera operator e video editor</h3>
+              <p class="frame__where">Locarno Film Festival</p>
+              <p>Contenuti video da interviste ed eventi per Instagram e YouTube. Supervisione dei montaggi degli studenti CISA.</p>
+            </article>
+            <article class="frame">
+              <p class="frame__year">2025</p>
+              <h3>Camera operator</h3>
+              <p class="frame__where">Winterland Locarno · Sconfinare Festival, Bellinzona</p>
+              <p>Riprese live di concerti sotto palco e di interviste.</p>
+            </article>
+            <figure class="frame frame--photo">
+              <img src="assets/me/bts-cisa-1.webp" alt="Martina riprende con la telecamera a spalla in un palazzetto" loading="lazy" />
+              <figcaption class="hand">camera a spalla</figcaption>
+            </figure>
+            <article class="frame">
+              <p class="frame__year">2024</p>
+              <h3>Live camera operator e video editor</h3>
+              <p class="frame__where">JazzAscona</p>
+              <p>Contenuti video da interviste e concerti live per Instagram e YouTube.</p>
+            </article>
+            <article class="frame">
+              <p class="frame__year">2022</p>
+              <h3>Camera operator e video editor</h3>
+              <p class="frame__where">Studio Media Tree di Vito Robbiani · 5 giorni</p>
+              <p>Intervista sulla mostra «Uomini in blu» dell’artista Mario Comensoli.</p>
+            </article>
+            <article class="frame frame--ink">
+              <p class="frame__year">2019 – 2022</p>
+              <h3>Stage in studi grafici</h3>
+              <ul class="frame__list">
+                <li><b>Tipografia Pedrazzini</b>, Locarno — poligrafia</li>
+                <li><b>Fondazione Diamante</b>, Bellinzona — decorazione</li>
+                <li><b>Key-Design</b>, Cadenazzo — video editing e web design</li>
+                <li><b>Lucas Design</b>, Giubiasco — graphic design e animazione</li>
+              </ul>
+            </article>
+            <div class="frame frame--end"><span>continua…</span></div>
+          </div>
+        </div>
+        <div class="path__progress" aria-hidden="true"><i data-film-bar></i></div>
+        <span class="sprite d-elf path__elf" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- ================= FORMAZIONE ================= -->
+    <section class="section school" id="formazione">
+      <header class="chapter">
+        <p class="chapter__num">Capitolo 04</p>
+        <h2 class="chapter__title" data-split>Formazione</h2>
+      </header>
+      <span class="sprite d-witchcat school__cat" aria-hidden="true"></span>
+      <div class="tickets">
+        <article class="ticket reveal">
+          <div class="ticket__stub"><span>Ammesso</span><b>2025<br />2026</b></div>
+          <div class="ticket__body">
+            <p class="ticket__kind">Specializzazione SPD</p>
+            <h3>Montaggio e post-produzione</h3>
+            <p>CISA – Conservatorio internazionale di scienze audiovisive</p>
+          </div>
+        </article>
+        <article class="ticket ticket--blue reveal">
+          <div class="ticket__stub"><span>Ammesso</span><b>2023<br />2025</b></div>
+          <div class="ticket__body">
+            <p class="ticket__kind">Scuola specializzata superiore SSS</p>
+            <h3>Designer visivo</h3>
+            <p>CISA – Conservatorio internazionale di scienze audiovisive</p>
+          </div>
+        </article>
+        <article class="ticket ticket--red reveal">
+          <div class="ticket__stub"><span>Ammesso</span><b>2018<br />2023</b></div>
+          <div class="ticket__body">
+            <p class="ticket__kind">Formazione</p>
+            <h3>Interactive Media Design</h3>
+            <p>CSIA – Centro scolastico per le industrie artistiche</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CONTATTI ================= -->
+    <section class="section contact" id="contatti">
+      <div class="contact__panel">
+        <div class="burst burst--contact" aria-hidden="true"></div>
+        <div class="contact__copy">
+          <p class="chapter__num">Capitolo 05</p>
+          <h2 class="contact__title" data-split>Facciamo qualcosa insieme?</h2>
+          <p class="contact__lead">Un montaggio, un titolo animato, un logo, una locandina, un mago. Scrivimi.</p>
+          <div class="contact__actions">
+            <button class="btn btn--big btn--red" data-copy-email data-cursor="Copia!">
+              <span data-email-label></span>
+            </button>
+            <a class="btn btn--big" data-phone></a>
+          </div>
+          <p class="contact__place"><span class="tag tag--ink" data-place></span><span class="contact__socials" data-socials></span></p>
+        </div>
+        <div class="contact__stage">
+          <div class="puppet puppet--contact" data-puppet="contact" role="img" aria-label="Tina saluta con entrambe le braccia"></div>
+          <div class="bubble bubble--contact"><span>ti aspetto!</span></div>
+        </div>
+        <span class="sticker sticker--pow" data-copied aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__end" data-split>Fine</p>
+    <p class="footer__small">© 2026 Martina Agueci · tutti i personaggi sono disegnati a mano (davvero)</p>
+    <button class="footer__top" data-totop aria-label="Torna su">
+      <span class="sprite d-frog"></span><span class="hand">torna su!</span>
+    </button>
+  </footer>
+
+  <!-- ================= SCHEDA PROGETTO ================= -->
+  <div class="sheet" data-sheet role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+    <div class="sheet__bar">
+      <button class="btn btn--small" data-close data-cursor="Chiudi">✕ Chiudi</button>
+      <p class="sheet__count" data-count></p>
+      <div class="sheet__nav">
+        <button class="btn btn--small" data-prev aria-label="Lavoro precedente">←</button>
+        <button class="btn btn--small" data-next aria-label="Lavoro successivo">→</button>
+      </div>
+    </div>
+    <div class="sheet__scroll" data-sheet-scroll>
+      <article class="sheet__page" data-sheet-page></article>
+    </div>
+  </div>
+
+  <div class="lightbox" data-lightbox hidden>
+    <button class="btn btn--small lightbox__close" data-lb-close>✕</button>
+    <img alt="" data-lb-img />
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
